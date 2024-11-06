@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className="flex items-center justify-between py-5 font-medium">
      
       {/* <img src={assets.logo} className="w-20" alt="" /> */}
-      <Link href="/" className="flex items-center space-x-1">
+      <Link to="/" className="flex items-center space-x-1">
         <img src={assets.logo} width={50} height={50} alt="" />
         <span className="font-bold text-xl text-black">Eshop</span>
       </Link>
