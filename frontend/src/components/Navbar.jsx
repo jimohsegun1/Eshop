@@ -7,13 +7,7 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-between py-5 font-medium">
-      {/* 
-      <Link href="/" className="flex items-center space-x-1">
-          <Image src="/images/logo.png" alt="logo" width={50} height={50} />
-          <span className="font-extrabold  text-2xl text-black">ecommNext</span>
-        </Link>
-      
-      */}
+     
       {/* <img src={assets.logo} className="w-20" alt="" /> */}
       <Link href="/" className="flex items-center space-x-1">
         <img src={assets.logo} width={50} height={50} alt="" />
