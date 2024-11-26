@@ -8,7 +8,7 @@ const NewsLetterBox = () => {
   return (
     <div className="text-center">
       <p className="text-2xl font-medium text-gray-800">
-        Subscribe now and get 20% off
+        Subscribe now & get 20% off
       </p>
       <p className="text-gray-400 mt-3">
         Lorem ipsm is simply dummy text of the printing and typesetting industry
