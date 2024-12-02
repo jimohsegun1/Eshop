@@ -8,7 +8,7 @@ toast;
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
 
-  const { setShowSearch, getCartCount, token, navigate, setCartItems } =
+  const { setShowSearch, getCartCount, token, setToken, navigate, setCartItems } =
     useContext(ShopContext);
 
   const logout = () => {
