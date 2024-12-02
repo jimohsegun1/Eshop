@@ -41,7 +41,7 @@ const ShopContextProvider = (props) => {
     setCartItems(cartData);
   };
 
-  // iterate the items and the producr size
+  // iterate the items and the product size
   const getCartCount = () => {
     let totalCount = 0;
     for (const items in cartItems) {
@@ -95,6 +95,12 @@ const ShopContextProvider = (props) => {
   useEffect(() => {
     getProductsData();
   }, []);
+
+  useEffect(() => {
+    if (!token && localStorage.getItem("token")) {
+      setToken(localStorage.getItem("token"));
+    }
+  }, [token]);
 
   const value = {
     products,

@@ -2,11 +2,12 @@ import React, { useContext, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useEffect } from "react";
 
 const Login = () => {
   const { token, setToken, navigate, backendUrl } = useContext(ShopContext);
 
-  const [currentState, setCurrentState] = useState("Sign Up");
+  const [currentState, setCurrentState] = useState("Login");
 
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -46,6 +47,12 @@ const Login = () => {
       toast.error(error.message);
     }
   };
+
+  useEffect(()=>{
+if (token) {
+  navigate("/")
+}
+  },[token])
 
   return (
     <form
