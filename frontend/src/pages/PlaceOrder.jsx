@@ -4,6 +4,7 @@ import CartTotal from "../components/CartTotal";
 import { assets } from "../assets/assets";
 import { ShopContext } from "../context/ShopContext";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const PlaceOrder = () => {
   const {
@@ -75,6 +76,22 @@ const PlaceOrder = () => {
           } else {
             toast.error(response.data.message);
           }
+          break;
+
+        // API call for Cash On Delivery
+        case "stripe":
+          const responseStripe = await axios.post(
+            backendUrl + "/api/order/stripe",
+            orderData,
+            { headers: { token } }
+          );
+          if (responseStripe.data.success) {
+            const { session_url } = responseStripe.data;
+            window.location.replace(session_url)
+          } else {
+            toast.error(responseStripe.data.message)
+          }
+
           break;
 
         default:
