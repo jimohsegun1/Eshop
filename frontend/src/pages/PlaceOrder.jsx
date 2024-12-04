@@ -127,7 +127,7 @@ const PlaceOrder = () => {
 
           break;
 
-        // API call for Stripe payment
+        // API call for Razorpay payment
         // case "razorpay":
         //   const responseRazorpay = await axios.post(
         //     backendUrl + "/api/order/razorpay",
